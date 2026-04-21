@@ -1,0 +1,477 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Mauli Vruddhashram</title>-->
+
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <meta name="description" content="Support elderly care at Mauli Vruddhashram">-->
+
+<!--    <link rel="stylesheet" href="/css/style.css">-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">-->
+<!--</head>-->
+
+<!--<body>-->
+
+<!--&lt;!&ndash; NAVBAR &ndash;&gt;-->
+<!--<header class="navbar">-->
+
+<!--    <div class="logo-container">-->
+<!--        <img src="/images/logo2.png" alt="logo">-->
+<!--        <div class="brand-text">-->
+<!--            <h2>Mauli Vruddhashram</h2>-->
+<!--            <p>Care with Love & Dignity</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="menu-toggle" onclick="toggleMenu()">☰</div>-->
+
+<!--    <nav id="navMenu">-->
+<!--        <a href="#about">About</a>-->
+<!--        <a href="#services">Services</a>-->
+<!--        <a href="#donate">Donate</a>-->
+<!--        <a href="#contact">Contact</a>-->
+<!--    </nav>-->
+
+<!--</header>-->
+
+<!--&lt;!&ndash; HERO &ndash;&gt;-->
+<!--<section class="hero">-->
+<!--    <div class="overlay">-->
+<!--        <h1>Give Them Love, Care & Respect</h1>-->
+<!--        <p>Your small help can change someone's life</p>-->
+<!--        <button class="btn-primary" onclick="donate()">Donate Now</button>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; ABOUT &ndash;&gt;-->
+<!--<section id="about">-->
+<!--    <h2>Who We Are</h2>-->
+<!--    <p>Mauli Vruddhashram provides love and care to elderly people.</p>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; SERVICES &ndash;&gt;-->
+<!--<section id="services">-->
+<!--    <h2>Our Services</h2>-->
+<!--    <div class="service-grid">-->
+<!--        <div class="card">24/7 Care</div>-->
+<!--        <div class="card">Medical Support</div>-->
+<!--        <div class="card">Healthy Food</div>-->
+<!--    </div>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; DONATE &ndash;&gt;-->
+<!--<section id="donate">-->
+<!--    <h2>Support Us ❤️</h2>-->
+<!--    <button class="btn-primary" onclick="donate()">Donate Now</button>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; CONTACT &ndash;&gt;-->
+<!--<section id="contact">-->
+<!--    <h2>Contact Us</h2>-->
+<!--    <form id="contactForm">-->
+<!--        <input type="text" placeholder="Name" required>-->
+<!--        <input type="email" placeholder="Email" required>-->
+<!--        <textarea placeholder="Message"></textarea>-->
+<!--        <button class="btn-primary">Send</button>-->
+<!--    </form>-->
+<!--    <p id="msg"></p>-->
+<!--</section>-->
+
+<!--&lt;!&ndash; FOOTER &ndash;&gt;-->
+<!--<footer>-->
+<!--    <p>© 2026 Mauli Vruddhashram</p>-->
+<!--</footer>-->
+
+<!--<script src="/js/script.js"></script>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mauli Vruddhashram </title>
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --bg-cream: #FCF7F3;
+            --text-dark: #2C3E2D;
+            --text-light: #6B7068;
+            --brand-orange: #D57D36;
+            --brand-green: #375945;
+            --brand-light-green: #4A6E59;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Georgia', serif; /* Simulating the serif font from the image */
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--brand-orange);
+            color: var(--white);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #b86526;
+        }
+
+        /* Section 1: Who We Are */
+        .who-we-are {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 20px;
+            color: var(--brand-green);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .section-label svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--brand-orange);
+        }
+
+        .text-content h1 {
+            font-size: 32px;
+            color: var(--brand-orange);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .text-content h1 span {
+            color: var(--brand-green);
+        }
+
+        .text-content p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        .image-content {
+            flex: 1;
+        }
+
+        .image-content img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* Section 2: Image Left, Text Right */
+        .services-intro {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            flex-direction: row-reverse;
+        }
+
+        .image-container-relative {
+            position: relative;
+            flex: 1;
+        }
+
+        .image-container-relative img {
+            width: 100%;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .btn-overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        /* Section 3: Services Cards */
+        .services-cards-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .services-cards-section .section-label {
+            justify-content: center;
+        }
+
+        .services-cards-section h2 {
+            font-size: 28px;
+            color: var(--brand-orange);
+            margin-bottom: 40px;
+        }
+
+        .services-cards-section h2 span {
+            color: var(--brand-green);
+        }
+
+        .cards-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            text-align: left;
+        }
+
+        .card-icon {
+            font-size: 30px;
+            color: var(--brand-green);
+            background: var(--bg-cream);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card-text h3 {
+            font-size: 18px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card-text p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .pagination-dots {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: #D3D3D3;
+            border-radius: 50%;
+        }
+
+        .dot.active {
+            background-color: var(--brand-orange);
+        }
+
+        /* Section 4: Footer / Testimonials */
+        .footer-section {
+            background-color: var(--brand-green);
+            color: var(--white);
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .footer-text {
+            flex: 1;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+
+        .footer-logo svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer-text p.subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #A9C2B1;
+        }
+
+        .footer-text h2 {
+            font-size: 36px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: var(--white);
+        }
+
+        .footer-images {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .footer-images img {
+            width: 100%;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .who-we-are, .services-intro, .footer-container {
+                flex-direction: column;
+            }
+            .cards-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <section class="who-we-are">
+        <div class="text-content">
+            <div class="section-label">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                Who We Are
+            </div>
+            <h1>Empowering the Golden Years <br><span>with Dignity and Love</span></h1>
+            <p>At Mauli Vruddhashram, we provide a loving home for elderly people who need care and compassion. Our mission is to ensure every senior lives their golden years with dignity, respect, and happiness. With your support, we offer a safe and nurturing environment for our elders to feel valued and loved.</p>
+            <a href="#" class="btn">Donate Now</a>
+        </div>
+        <div class="image-content">
+            <img src="https://via.placeholder.com/600x400/e0e0e0/808080?text=Caregiver+and+Seniors" alt="Nurse caring for elderly couple">
+        </div>
+    </section>
+
+    <section class="services-intro">
+        <div class="text-content">
+            <div class="section-label">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                Our Services
+            </div>
+            <h1>Providing Compassionate Care <br><span>for Our Beloved Seniors</span></h1>
+            <p>At Mauli Vruddhashram, we provide a loving home for elderly people who need care and compassion. Our mission is to ensure every senior lives their golden years with dignity, respect, and happiness. With your support, we offer a safe and nurturing environment for our elders.</p>
+        </div>
+        <div class="image-container-relative">
+            <img src="https://via.placeholder.com/600x400/e0e0e0/808080?text=Happy+Family+with+Seniors" alt="Group of people smiling">
+            <a href="#" class="btn btn-overlay">About Us ></a>
+        </div>
+    </section>
+
+    <section class="services-cards-section">
+        <div class="section-label">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            Our Services
+        </div>
+        <h2>Providing <span>Compassionate Care</span> for Our <span>Beloved Seniors</span></h2>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">➕</div>
+                <div class="card-text">
+                    <h3>24/7<br>Compassionate Care</h3>
+                    <p>We provide constant support and nurturing care to ensure well-being at all times.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🩺</div>
+                <div class="card-text">
+                    <h3>Medical<br>Support</h3>
+                    <p>Dedicated medical attention and regular check-ups to maintain optimal health.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">🍲</div>
+                <div class="card-text">
+                    <h3>Nutritious<br>Meals</h3>
+                    <p>Healthy, balanced diets tailored to the specific needs of our elderly residents.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+        </div>
+    </section>
+</div>
+
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-text">
+            <div class="footer-logo">
+                <svg viewBox="0 0 24 24" fill="var(--brand-orange)"><circle cx="12" cy="12" r="10"/></svg>
+                Mauli <br><span style="font-size: 14px; font-weight: normal;">Vruddhashram</span>
+            </div>
+            <p class="subtitle">What People Say About Us</p>
+            <h2>Be the Reason<br>Someone Smiles Today</h2>
+            <a href="#" class="btn">Donate Now</a>
+        </div>
+
+        <div class="footer-images">
+            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+1" alt="Seniors smiling">
+            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+2" alt="Caregiver helping senior">
+            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+3" alt="Group of seniors">
+            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+4" alt="Happy senior woman">
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
