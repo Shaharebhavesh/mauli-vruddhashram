@@ -9,6 +9,12 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     document.getElementById("msg").innerText = "Message Sent!";
 });
 
+//new mob
+function toggleMenu() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('active');
+    }
+
 // DONATE BUTTON
 function donate(){
     alert("Payment gateway coming soon!");
