@@ -287,25 +287,23 @@
 
         /* ===== NAVBAR ===== */
 /* ===== PREMIUM NAVBAR ===== */
+/* ===== SOLID WHITE NAVBAR ===== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 14px 50px;
 
-    /* Premium glass effect */
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
+    background: #ffffff;   /* ✅ solid white */
 
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 
-    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-bottom: 1px solid #eee;
 }
-
 /* LEFT SIDE */
 .nav-left {
     display: flex;
@@ -315,8 +313,8 @@
 
 /* LOGO */
 .logo {
-    width: 42px;
-    height: 42px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     transition: 0.3s;
 }
@@ -326,39 +324,42 @@
 }
 
 /* BRAND TEXT */
-/* ===== PREMIUM BRAND TEXT ===== */
-.brand h1 {
-    margin: 0;
-    font-size: 20px;
-    font-weight: 700;
+/* ===== FIXED PREMIUM BRAND ===== */
 
-    /* Gradient text */
+/* Override global serif font */
+.brand h1 {
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+
+    /* Premium gradient */
     background: linear-gradient(135deg, #FF7043, #D57D36);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     letter-spacing: 0.5px;
-    line-height: 1.1;
 }
 
 /* Subtitle */
 .brand span {
-    display: block;
+    font-family: 'Poppins', sans-serif !important;
+
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     color: #375945;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
 }
 
-/* Optional premium spacing */
+/* Layout */
 .brand {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 /*
 .logo {
     border-radius: 10px;
