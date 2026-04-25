@@ -1,21 +1,23 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <script src="/script.js"></script>
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/homepage.css">
     <link rel="stylesheet" href="/css/style.css">
 
-
-    <title>Mauli Vruddhashram </title>
-
+    <title>Mauli Vruddhashram</title>
 </head>
+
 <body>
 
+<!-- ===== NAVBAR ===== -->
 <header class="navbar">
 
     <div class="nav-left">
@@ -23,7 +25,7 @@
 
         <div class="brand">
             <h1>Mauli Vruddhashram</h1>
-            <span>Where Every Elder Feels Like Home </span>
+            <span>Where Every Elder Feels Like Home</span>
         </div>
     </div>
 
@@ -35,12 +37,12 @@
     </nav>
 
     <div class="nav-right">
-<!--        <button class="btn-donate">Donate</button>-->
         <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     </div>
 
 </header>
 
+<!-- ===== HERO (UNCHANGED) ===== -->
 <section class="hero">
 
     <div class="hero-bg"></div>
@@ -52,7 +54,7 @@
         </h1>
 
         <p class="fade-up delay-1">
-            A safe and caring home for elderly people where every life is valued, respected, and loved.
+            A safe and caring home for elderly people where every life is valued.
         </p>
 
         <div class="hero-buttons fade-up delay-2">
@@ -63,10 +65,12 @@
 
 </section>
 
-
+<!-- ===== MAIN CONTENT ===== -->
 <div class="container">
+
+    <!-- SECTION 1 -->
     <section class="who-we-are">
-        <div class="text-content">
+        <div class="text-content animate from-left">
             <div class="section-label">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
                 Who We Are
@@ -75,66 +79,77 @@
             <p>At Mauli Vruddhashram, we provide a loving home for elderly people who need care and compassion. Our mission is to ensure every senior lives their golden years with dignity, respect, and happiness. With your support, we offer a safe and nurturing environment for our elders to feel valued and loved.</p>
             <a href="#" class="btn">Donate Now</a>
         </div>
-        <div class="image-content">
-            <img src="/images/elder_lady.png" alt="Nurse caring for elderly couple">
+
+        <div class="image-content animate from-right delay-1">
+            <img src="/images/elder_lady.png">
         </div>
     </section>
 
+    <!-- SECTION 2 -->
     <section class="services-intro">
-        <div class="text-content">
+
+        <div class="text-content animate from-right">
             <div class="section-label">
                 <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
                 Our Services
             </div>
+
             <h1>Providing Compassionate Care <br><span>for Our Beloved Seniors</span></h1>
             <p>At Mauli Vruddhashram, we provide a loving home for elderly people who need care and compassion. Our mission is to ensure every senior lives their golden years with dignity, respect, and happiness. With your support, we offer a safe and nurturing environment for our elders.</p>
-        </div>
-        <div class="image-container-relative">
-            <img src="/images/walking.png" alt="Group of people smiling">
-            <a href="#" class="btn btn-overlay">About Us ></a>
 
+        </div>
+
+        <div class="image-container-relative animate from-left delay-1">
+            <img src="/images/walking.png">
+            <a href="#" class="btn btn-overlay">About Us ></a>
         </div>
 
     </section>
+
+    <!-- SECTION 3 -->
     <section class="services-cards-section">
+
         <div class="section-label">
             <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
 
             Our Services
         </div>
-        <h2>Providing <span>Compassionate Care</span> for Our <span>Beloved Seniors</span></h2>
+
+        <h2>Providing <span>Care</span> for Our <span>Seniors</span></h2>
 
         <div class="cards-grid">
-            <div class="card">
+
+            <div class="card animate from-bottom delay-1">
                 <div class="card-icon">➕</div>
                 <div class="card-text">
-                    <h3>24/7<br>Compassionate Care</h3>
-                    <p>We provide constant support and nurturing care to ensure well-being at all times.</p>
+                    <h3>24/7 Care</h3>
+                    <p>Continuous support for elderly people.</p>
                 </div>
             </div>
-            <div class="card">
+
+            <div class="card animate from-bottom delay-2">
                 <div class="card-icon">🩺</div>
                 <div class="card-text">
-                    <h3>Medical<br>Support</h3>
-                    <p>Dedicated medical attention and regular check-ups to maintain optimal health.</p>
+                    <h3>Medical Support</h3>
+                    <p>Regular health checkups and care.</p>
                 </div>
             </div>
-            <div class="card">
+
+            <div class="card animate from-bottom delay-3">
                 <div class="card-icon">🍲</div>
                 <div class="card-text">
-                    <h3>Nutritious<br>Meals</h3>
-                    <p>Healthy, balanced diets tailored to the specific needs of our elderly residents.</p>
+                    <h3>Healthy Meals</h3>
+                    <p>Nutritious diet for better health.</p>
                 </div>
             </div>
+
         </div>
 
-        <div class="pagination-dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-        </div>
     </section>
+
 </div>
 
+<!-- ===== FOOTER ===== -->
 <footer class="footer-section">
     <div class="footer-container">
         <div class="footer-text">
@@ -148,14 +163,38 @@
         </div>
 
         <div class="footer-images">
-            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+1" alt="Seniors smiling">
-            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+2" alt="Caregiver helping senior">
-            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+3" alt="Group of seniors">
-            <img src="https://via.placeholder.com/300x200/e0e0e0/808080?text=Image+4" alt="Happy senior woman">
+            <img src="/images/nurse.png" alt="Seniors smiling">
+            <img src="/images/nurse.png" alt="Caregiver helping senior">
+            <img src="/images/nurse.png" alt="Group of seniors">
+            <img src="/images/nurse.png" alt="Happy senior woman">
         </div>
     </div>
 </footer>
 
+<script>
+
+
+
+
+    /* ===== LOAD ANIMATION FIX ===== */
+    window.addEventListener("load", () => {
+
+        const elements = document.querySelectorAll(".animate");
+
+        console.log("Animate elements:", elements.length); // debug
+
+        elements.forEach((el, index) => {
+
+            el.classList.add("init");
+
+            setTimeout(() => {
+                el.classList.add("active");
+            }, 300 + (index * 150));
+
+        });
+
+    });
+
+</script>
 </body>
 </html>
-
