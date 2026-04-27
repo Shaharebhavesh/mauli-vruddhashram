@@ -21,7 +21,9 @@
 <header class="navbar">
 
     <div class="nav-left">
-        <img src="/images/logo.png" class="logo">
+        <a href="/">
+            <img src="/images/logo.png" class="logo" alt="Mauli Vruddhashram Logo">
+        </a>
 
         <div class="brand">
             <h1>Mauli Vruddhashram</h1>
@@ -177,23 +179,41 @@
 
 
     /* ===== LOAD ANIMATION FIX ===== */
-    window.addEventListener("load", () => {
+/* ===== FINAL ANIMATION SYSTEM ===== */
 
-        const elements = document.querySelectorAll(".animate");
+window.addEventListener("load", () => {
 
-        console.log("Animate elements:", elements.length); // debug
+    /* 1. GROUP ANIMATION (cards wave) */
+    const groups = document.querySelectorAll(".animate-group");
 
-        elements.forEach((el, index) => {
+    groups.forEach(group => {
+        const items = group.querySelectorAll(".animate");
 
+        items.forEach((el, index) => {
             el.classList.add("init");
+            el.getBoundingClientRect();
 
             setTimeout(() => {
                 el.classList.add("active");
-            }, 300 + (index * 150));
-
+            }, 200 + (index * 150));
         });
-
     });
+
+    /* 2. NORMAL ANIMATION (images, text, etc.) */
+    const elements = document.querySelectorAll(".animate:not(.animate-group .animate)");
+
+    elements.forEach((el, index) => {
+        el.classList.add("init");
+        el.getBoundingClientRect();
+
+        setTimeout(() => {
+            el.classList.add("active");
+        }, 200 + (index * 100));
+    });
+
+});
+
+
 
 </script>
 </body>

@@ -327,7 +327,7 @@
     width: 45px;
     height: 45px;
     object-fit: contain;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .logo:hover {
@@ -508,6 +508,19 @@ nav a:hover {
 .card:hover .card-icon {
     transform: scale(1.15) rotate(5deg);
 }
+
+/* disable hover on mobile */
+@media (hover: none) {
+    .card:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+}
+
+/* add tap feedback */
+.card:active {
+    transform: scale(0.97);
+}
 /*
 .animate.active {
     opacity: 1;
@@ -608,4 +621,46 @@ nav a:hover {
         transform: translateY(30px) scale(0.97);
     }
 
+}
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* glow layer */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    background: radial-gradient(circle at top left, rgba(255,112,67,0.25), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* lift + glow */
+.card:hover {
+    transform: translateY(-14px) scale(1.03);
+    box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+}
+
+/* ===== FIX MOBILE HOVER STICK ===== */
+@media (hover: none) {
+
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .card::before {
+        opacity: 0 !important;
+    }
+}
+
+.card:active {
+    transform: scale(0.97);
 }
