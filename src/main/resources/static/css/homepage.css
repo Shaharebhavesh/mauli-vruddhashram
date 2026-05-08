@@ -939,3 +939,15 @@ nav a:hover {
 
     color: #2F5D50;
 }
+/* ===== MOBILE BUTTON TEXT CENTER ===== */
+@media (max-width: 768px) {
+
+    .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+    }
+
+}
