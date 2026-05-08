@@ -13,6 +13,12 @@ public class PageController {
         return "index";
     }
 
+
+    @GetMapping("/about")
+    public String aboutPage() {
+        return "about";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {
