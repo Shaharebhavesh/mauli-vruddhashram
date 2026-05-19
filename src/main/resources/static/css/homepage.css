@@ -918,12 +918,35 @@ nav a:hover {
     );
 }
 
-/* mini heading */
+/* mini heading
 .services-mini-heading {
 
     text-align: center;
     margin: 40px 0 35px;
+}*/
+
+/* ===== PREMIUM MINI HEADING ===== */
+.services-mini-heading {
+
+    text-align: center;
+    margin: 40px 0 35px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    animation: fadeUpHeading 1s ease forwards;
 }
+
+/* smooth animation */
+@keyframes fadeUpHeading {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
 
 .services-mini-heading span {
 

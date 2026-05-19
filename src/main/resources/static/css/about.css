@@ -83,11 +83,13 @@
 
 /* ===== ABOUT SECTION ===== */
 .about-section {
-    padding: 100px 0;
+
+    padding: 50px 0 0;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
+
+    gap: 50px;
 
     align-items: center;
 }
@@ -124,11 +126,13 @@
 
 /* ===== FEATURES ===== */
 .about-features {
-    margin-top: 35px;
+
+    margin-top: 22px;
 
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    gap: 18px;
+
+    gap: 16px;
 }
 
 .feature-card {
@@ -157,35 +161,50 @@
 }
 
 
+
 /* ===== MISSION ===== */
+/* ===== MISSION SECTION ===== */
 .mission-section {
-    padding: 90px 0;
+
+    padding: 10px 0 60px;
 
     background: #f9f6f2;
 }
 
+/* GRID */
 .mission-grid {
+
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
 }
 
+/* CARD */
 .mission-card {
+
     background: white;
 
-    padding: 40px 30px;
+    padding: 35px 25px;
 
-    border-radius: 28px;
+    border-radius: 24px;
 
     text-align: center;
 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 
     transition: 0.35s ease;
 }
 
+/* HOVER */
 .mission-card:hover {
-    transform: translateY(-10px);
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,0.08);
 }
 
 .mission-icon {
@@ -279,7 +298,12 @@
     }
 
     .about-section {
+
         grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 45px 0 30px;
     }
 
     .about-text h2 {
@@ -311,4 +335,66 @@
         align-items: center;
     }
 
+}
+/* =========================================
+   SAFE PREMIUM ANIMATION
+========================================= */
+
+/* DEFAULT VISIBLE */
+.reveal,
+.from-left,
+.from-right,
+.from-bottom {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition:
+            all 1s ease;
+}
+
+/* ONLY animate when JS adds class */
+.js-enabled .reveal {
+
+    opacity: 0;
+}
+
+/* LEFT */
+.js-enabled .from-left {
+
+    transform: translateX(-100px);
+}
+
+/* RIGHT */
+.js-enabled .from-right {
+
+    transform: translateX(100px);
+}
+
+/* BOTTOM */
+.js-enabled .from-bottom {
+
+    transform: translateY(80px);
+}
+
+/* ACTIVE */
+.js-enabled .reveal.active {
+
+    opacity: 1;
+
+    transform: translate(0,0);
+}
+
+/* DELAYS */
+.delay-1 {
+    transition-delay: 0.2s;
+}
+
+.delay-2 {
+    transition-delay: 0.4s;
+}
+
+.delay-3 {
+    transition-delay: 0.6s;
 }

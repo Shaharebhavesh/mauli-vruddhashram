@@ -63,3 +63,32 @@ window.addEventListener("scroll", () => {
 
 
 console.log("JS WORKING");
+
+/* =========================================
+   ABOUT PAGE SCROLL ANIMATION
+========================================= */
+/* enable js animations */
+document.body.classList.add("js-enabled");
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+
+    reveals.forEach((el) => {
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop =
+            el.getBoundingClientRect().top;
+
+        const revealPoint = 120;
+
+        if (revealTop < windowHeight - revealPoint) {
+
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+window.addEventListener("load", revealOnScroll);
