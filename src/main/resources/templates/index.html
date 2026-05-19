@@ -15,12 +15,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/homepage.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/language.css">
 
     <title>Mauli Vruddhashram</title>
 </head>
 
 <body>
 <script src="/script.js"></script>
+<script src="/language.js"></script>
 <!-- ===== NAVBAR ===== -->
 <header class="navbar">
 
@@ -42,9 +44,33 @@
         <a href="#">Gallary</a>
         <a href="#">Contact</a>
 
-        <!-- ===== LANGUAGE TRANSLATOR ===== -->
-        <div id="google_translate_element"></div>
+        <!-- ===== LANGUAGE SELECTOR ===== -->
+        <div class="language-selector notranslate">
 
+            <div class="selected-language notranslate">
+                🌐 English ▼
+            </div>
+
+            <div class="language-dropdown notranslate">
+
+                <div class="notranslate"
+                     onclick="changeLanguage('en')">
+                    English
+                </div>
+
+                <div class="notranslate"
+                     onclick="changeLanguage('hi')">
+                    हिंदी
+                </div>
+
+                <div class="notranslate"
+                     onclick="changeLanguage('mr')">
+                    मराठी
+                </div>
+
+            </div>
+
+        </div>
     </nav>
 
     <div class="nav-right">
@@ -221,7 +247,7 @@
         <div class="footer-contact">
             <h3>Contact Us</h3>
             <p>📍 Nagpur, Maharashtra</p>
-            <p>📞 +91 9822738582,9730161863, 9822475887</p>
+            <p>📞 +91 9822738582,9730161863,9822475887</p>
 
 
             <p>✉️ support@mauli.org</p>
@@ -278,6 +304,14 @@ window.addEventListener("load", () => {
 
 });
 
+
+
 </script>
+<!-- HIDDEN GOOGLE TRANSLATE -->
+<div id="google_translate_element"
+     style="display:none;">
+</div>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

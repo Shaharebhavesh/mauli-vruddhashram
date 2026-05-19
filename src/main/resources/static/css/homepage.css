@@ -479,21 +479,34 @@
 /* ===== FIXED PREMIUM BRAND ===== */
 
 /* Override global serif font */
+/* ===== FIXED PREMIUM BRAND ===== */
+
 .brand h1 {
+
     font-family: 'Poppins', sans-serif !important;
 
     font-size: 22px;
     font-weight: 700;
+
     margin: 0;
 
-    /* Premium gradient */
-    background: linear-gradient(135deg, #FF7043, #D57D36);
+    color: #FF7043; /* fallback */
+
+    background: linear-gradient(
+        135deg,
+        #FF7043,
+        #D57D36
+    );
+
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+    -webkit-text-fill-color: initial;
 
     letter-spacing: 0.5px;
-}
 
+    transition: none !important;
+}
 /* Subtitle */
 .brand span {
     font-family: 'Poppins', sans-serif !important;
@@ -504,6 +517,24 @@
 
     letter-spacing: 3px;
     text-transform: uppercase;
+}
+
+/* prevent disappearing on hover */
+
+.brand,
+.brand:hover,
+.brand h1,
+.brand h1:hover,
+.brand span,
+.brand span:hover {
+
+    opacity: 1 !important;
+
+    visibility: visible !important;
+
+    transform: none !important;
+
+    filter: none !important;
 }
 
 /* Layout */
