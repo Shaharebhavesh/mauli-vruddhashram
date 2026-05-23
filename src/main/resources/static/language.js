@@ -1,6 +1,6 @@
-
-
-/* ===== GOOGLE TRANSLATE ===== */
+/* =========================================
+   GOOGLE TRANSLATE INIT
+========================================= */
 
 function googleTranslateElementInit() {
 
@@ -13,46 +13,40 @@ function googleTranslateElementInit() {
         autoDisplay: false
 
     }, 'google_translate_element');
+
+    loadSavedLanguage();
 }
 
-/* change language */
 /* =========================================
    CHANGE LANGUAGE
 ========================================= */
 
 function changeLanguage(lang) {
 
-    const interval = setInterval(() => {
+    const select =
+        document.querySelector(".goog-te-combo");
 
-        const select =
-            document.querySelector(".goog-te-combo");
+    if(select) {
 
-        if(select) {
+        select.value = lang;
 
-            /* change translate language */
-            select.value = lang;
+        select.dispatchEvent(
+            new Event('change')
+        );
 
-            select.dispatchEvent(
-                new Event('change')
-            );
+        /* save selected language */
+        localStorage.setItem(
+            "selectedLanguage",
+            lang
+        );
 
-            clearInterval(interval);
-
-            /* save language */
-            localStorage.setItem(
-                "selectedLanguage",
-                lang
-            );
-
-            /* update navbar text */
-            updateSelectedLanguage(lang);
-        }
-
-    }, 500);
+        /* update navbar text */
+        updateSelectedLanguage(lang);
+    }
 }
 
 /* =========================================
-   UPDATE NAVBAR LANGUAGE TEXT
+   UPDATE NAVBAR TEXT
 ========================================= */
 
 function updateSelectedLanguage(lang) {
@@ -82,10 +76,10 @@ function updateSelectedLanguage(lang) {
 }
 
 /* =========================================
-   LOAD SAVED LANGUAGE AFTER RELOAD
+   LOAD SAVED LANGUAGE
 ========================================= */
 
-window.addEventListener("load", () => {
+function loadSavedLanguage() {
 
     const savedLang =
         localStorage.getItem(
@@ -93,8 +87,25 @@ window.addEventListener("load", () => {
         ) || "en";
 
     updateSelectedLanguage(savedLang);
-});
 
+    const interval = setInterval(() => {
+
+        const select =
+            document.querySelector(".goog-te-combo");
+
+        if(select) {
+
+            select.value = savedLang;
+
+            select.dispatchEvent(
+                new Event('change')
+            );
+
+            clearInterval(interval);
+        }
+
+    }, 500);
+}
     /* remove google translate highlight continuously */
 
 setInterval(() => {

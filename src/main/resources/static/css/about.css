@@ -280,20 +280,132 @@
 
 
 /* ===== MOBILE ===== */
+/* =========================================
+   MOBILE NAVBAR SAME AS HOME
+========================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    color: #2F5D50;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-    .about-hero {
-        height: auto;
-        min-height: 90vh;
+    /* navbar */
+    header {
 
-        padding: 120px 20px 80px;
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+
+        z-index: 9999;
+
+        background: white;
+
+        box-shadow:
+            0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    /* avoid overlap */
+    body {
+
+        padding-top: 90px;
+    }
+
+    /* nav menu */
+    nav {
+
+        position: absolute;
+
+        top: 70px;
+
+        right: 0;
+
+        background: white;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        display: none;
+
+        text-align: center;
+
+        padding: 20px 0;
+
+        box-shadow:
+            0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+
+        display: flex;
+    }
+
+    /* menu button */
+    .menu-toggle {
+
+        display: block;
+    }
+
+    /* hide tagline */
+    .brand span {
+
+        display: none;
+    }
+
+    /* logo size */
+    .brand img {
+
+        width: 55px;
+    }
+
+    /* brand title */
+    .brand h2 {
+
+        font-size: 18px;
+
+        line-height: 1.2;
+    }
+
+.brand {
+
+    gap: 10px;
+}
+    /* ===== ABOUT PAGE ===== */
+
+    .about-hero {
+
+        height: auto;
+
+        min-height: calc(100vh - 90px);
+
+        padding: 40px 20px 60px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
     }
 
     .about-content h1 {
+
         font-size: 38px;
     }
 
     .about-content p {
+
         font-size: 15px;
     }
 
@@ -307,36 +419,77 @@
     }
 
     .about-text h2 {
+
         font-size: 34px;
     }
 
     .about-features {
+
         grid-template-columns: 1fr;
     }
 
     .mission-grid {
+
         grid-template-columns: 1fr;
     }
 
     .cta-content h2 {
+
         font-size: 36px;
     }
 
     .cta-buttons {
+
         flex-direction: column;
     }
 
     .btn,
     .btn-glass {
+
         width: 100%;
 
         display: flex;
+
         justify-content: center;
+
         align-items: center;
     }
 
-}
-/* =========================================
+    /* HERO FIX MOBILE */
+    .hero,
+    .about-hero {
+
+        width: 100%;
+
+        overflow: hidden;
+    }
+
+    .hero-bg,
+    .about-hero {
+
+        background-position: center center !important;
+
+        background-size: cover !important;
+    }
+
+    /* fix image overflow */
+    .about-content {
+
+        width: 100%;
+
+        padding: 20px 10px;
+    }
+
+    /* fix large text */
+    .about-content h1 {
+
+        font-size: 52px;
+
+        line-height: 1.15;
+    }
+
+
+}/* =========================================
    SAFE PREMIUM ANIMATION
 ========================================= */
 
@@ -397,4 +550,40 @@
 
 .delay-3 {
     transition-delay: 0.6s;
+}
+
+/* =========================================
+   FIX ABOUT PAGE ZOOM / NAVBAR ISSUE
+========================================= */
+
+html,
+body {
+
+    overflow-x: hidden;
+
+    width: 100%;
+}
+
+/* navbar spacing */
+body {
+
+    padding-top: 90px;
+}
+
+/* hero section */
+.about-hero {
+
+    margin-top: -90px;
+
+    padding-top: 90px;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
 }
