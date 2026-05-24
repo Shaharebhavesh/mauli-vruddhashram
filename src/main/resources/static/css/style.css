@@ -1,6 +1,7 @@
 /* ===== HERO SECTION ===== */
 .hero {
     height: 70vh;
+     margin-top: 15px;
     position: relative;
     display: flex;
     align-items: center;
@@ -89,11 +90,14 @@
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-    .hero {
-        min-height: 90vh;
-        height: auto;
-        padding: 100px 20px 60px;
-    }
+   .hero {
+
+       min-height: calc(100vh - 90px);
+
+       height: auto;
+
+       padding: 30px 20px 60px;
+   }
 
     .hero-content h1 {
         font-size: 28px;

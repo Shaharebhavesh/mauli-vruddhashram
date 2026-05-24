@@ -386,19 +386,25 @@
 
     .about-hero {
 
+
         height: auto;
 
         min-height: calc(100vh - 90px);
 
-        padding: 40px 20px 60px;
+        margin-top: 15px;
+
+        padding: 30px 18px 40px;
 
         display: flex;
 
         align-items: center;
 
         justify-content: center;
-    }
 
+        background-position: center center !important;
+
+        background-size: cover !important;
+    }
     .about-content h1 {
 
         font-size: 38px;
@@ -571,7 +577,7 @@ body {
 }
 
 /* hero section */
-.about-hero {
+/*.about-hero {
 
     margin-top: -90px;
 
@@ -586,4 +592,5 @@ body {
     background-size: cover;
 
     background-position: center;
-}
+}*/
+
