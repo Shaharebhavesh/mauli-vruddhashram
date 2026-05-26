@@ -19,6 +19,11 @@ public class PageController {
         return "about";
     }
 
+    @GetMapping("/service")
+    public String servicePage() {
+        return "service";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {

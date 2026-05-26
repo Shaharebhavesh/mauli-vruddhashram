@@ -21,7 +21,7 @@ function googleTranslateElementInit() {
    CHANGE LANGUAGE
 ========================================= */
 
-function changeLanguage(lang) {
+/*function changeLanguage(lang) {
 
     const select =
         document.querySelector(".goog-te-combo");
@@ -32,7 +32,60 @@ function changeLanguage(lang) {
 
         select.dispatchEvent(
             new Event('change')
+        );*/
+
+function changeLanguage(lang) {
+
+    /* update navbar text instantly */
+    updateSelectedLanguage(lang);
+
+    /* save language */
+    localStorage.setItem(
+        "selectedLanguage",
+        lang
+    );
+
+    const applyTranslation = () => {
+
+        const select =
+            document.querySelector(".goog-te-combo");
+
+        if (!select) return false;
+
+        /* reset first */
+        select.value = "en";
+
+        select.dispatchEvent(
+            new Event("change")
         );
+
+        /* apply selected language */
+        setTimeout(() => {
+
+            select.value = lang;
+
+            select.dispatchEvent(
+                new Event("change")
+            );
+
+        }, 300);
+
+        return true;
+    };
+
+    /* try immediately */
+    if (!applyTranslation()) {
+
+        const interval = setInterval(() => {
+
+            if (applyTranslation()) {
+
+                clearInterval(interval);
+            }
+
+        }, 300);
+    }
+}
 
         /* save selected language */
         localStorage.setItem(
