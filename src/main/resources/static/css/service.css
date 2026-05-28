@@ -384,26 +384,26 @@
 /* =========================================
                 CTA SECTION
 ========================================= */
-
 .cta-section {
 
     position: relative;
 
-    padding: 120px 20px;
+    padding: 70px 20px;
 
     text-align: center;
 
     overflow: hidden;
 
     background:
-        linear-gradient(rgba(0,0,0,0.65),
-        rgba(0,0,0,0.75)),
-        url("/images/nurse.png")
-        center/cover no-repeat;
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
+        url("/images/nurse.png");
 
-    animation: zoomBg 12s ease-in-out infinite alternate;
+    background-position: center;
+
+    background-size: cover !important;
+
+    background-repeat: no-repeat;
 }
-
 /* OVERLAY */
 
 .cta-overlay {
@@ -533,19 +533,6 @@
     }
 }
 
-@keyframes zoomBg {
-
-    0% {
-
-        background-size: 100%;
-    }
-
-    100% {
-
-        background-size: 108%;
-    }
-}
-
 /* BUTTON */
 
 .btn {
@@ -659,4 +646,34 @@
     opacity: 1;
 
     transform: translateY(0);
+}
+@media (max-width: 768px) {
+
+    .cta-section {
+
+        padding: 50px 18px;
+
+        min-height: auto;
+
+        height: auto;
+    }
+
+    .cta-content {
+
+        width: 100%;
+    }
+
+    .cta-content h2 {
+
+        font-size: 32px;
+
+        line-height: 1.3;
+    }
+
+    .cta-content p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
 }

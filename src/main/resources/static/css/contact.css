@@ -4,11 +4,11 @@
 
 .contact-hero {
 
-    height: 70vh;
-
-    margin-top: 15px;
-
     position: relative;
+
+    min-height: 90vh;
+
+    width: 100%;
 
     display: flex;
 
@@ -20,13 +20,20 @@
 
     overflow: hidden;
 
-    background:
-        linear-gradient(rgba(0,0,0,0.55),
-        rgba(0,0,0,0.7)),
-        url("/images/nurse.png")
-        center/cover no-repeat;
-}
+    margin-top: 5px;
 
+    padding: 120px 20px 80px;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
+        url("/images/nurse.png");
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+}
 .contact-overlay {
 
     position: absolute;
@@ -545,12 +552,9 @@
     box-shadow:
         0 0 0 4px rgba(255,112,67,0.12);
 }
-/* HERO BACKGROUND ANIMATION */
-
 .contact-hero {
 
-    animation:
-        heroZoom 12s ease-in-out infinite alternate;
+    background-size: cover !important;
 }
 
 @keyframes heroZoom {
@@ -563,5 +567,18 @@
     100% {
 
         background-size: 108%;
+    }
+}
+@media (max-width: 768px) {
+
+    .contact-hero {
+
+        min-height: 90vh;
+
+        height: auto;
+
+        padding: 30px 18px 50px;
+
+        margin-top: 5px;
     }
 }
