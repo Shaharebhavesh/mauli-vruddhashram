@@ -21,22 +21,9 @@ function googleTranslateElementInit() {
    CHANGE LANGUAGE
 ========================================= */
 
-/*function changeLanguage(lang) {
-
-    const select =
-        document.querySelector(".goog-te-combo");
-
-    if(select) {
-
-        select.value = lang;
-
-        select.dispatchEvent(
-            new Event('change')
-        );*/
-
 function changeLanguage(lang) {
 
-    /* update navbar text instantly */
+    /* update navbar text */
     updateSelectedLanguage(lang);
 
     /* save language */
@@ -45,57 +32,25 @@ function changeLanguage(lang) {
         lang
     );
 
-    const applyTranslation = () => {
+    const interval = setInterval(() => {
 
         const select =
             document.querySelector(".goog-te-combo");
 
-        if (!select) return false;
-
-        /* reset first */
-        select.value = "en";
-
-        select.dispatchEvent(
-            new Event("change")
-        );
-
-        /* apply selected language */
-        setTimeout(() => {
+        if(select) {
 
             select.value = lang;
 
             select.dispatchEvent(
-                new Event("change")
+                new Event("change", {
+                    bubbles: true
+                })
             );
 
-        }, 300);
+            clearInterval(interval);
+        }
 
-        return true;
-    };
-
-    /* try immediately */
-    if (!applyTranslation()) {
-
-        const interval = setInterval(() => {
-
-            if (applyTranslation()) {
-
-                clearInterval(interval);
-            }
-
-        }, 300);
-    }
-}
-
-        /* save selected language */
-        localStorage.setItem(
-            "selectedLanguage",
-            lang
-        );
-
-        /* update navbar text */
-        updateSelectedLanguage(lang);
-    }
+    }, 300);
 }
 
 /* =========================================
@@ -151,7 +106,9 @@ function loadSavedLanguage() {
             select.value = savedLang;
 
             select.dispatchEvent(
-                new Event('change')
+                new Event("change", {
+                    bubbles: true
+                })
             );
 
             clearInterval(interval);
@@ -159,28 +116,9 @@ function loadSavedLanguage() {
 
     }, 500);
 }
-    /* remove google translate highlight continuously */
-
-setInterval(() => {
-
-    document
-        .querySelectorAll(".goog-text-highlight")
-        .forEach(el => {
-
-            el.style.background = "transparent";
-            el.style.boxShadow = "none";
-        });
-
-}, 100);
 
 /* =========================================
-   CLEAN GOOGLE TRANSLATE STYLES
-========================================= */
-
-/* remove google translate highlight */
-
-/* =========================================
-   CLEAN GOOGLE TRANSLATE EFFECT
+   REMOVE GOOGLE HIGHLIGHT
 ========================================= */
 
 setInterval(() => {
@@ -197,4 +135,3 @@ setInterval(() => {
         });
 
 }, 100);
-

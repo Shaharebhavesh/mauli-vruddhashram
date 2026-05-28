@@ -89,6 +89,59 @@ function revealOnScroll() {
     });
 }
 
+/* =========================================
+   MOBILE MENU TOGGLE
+========================================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navMenu")
+        .classList.toggle("active");
+}
+
+/* =========================================
+   CLOSE MENU WHEN CLICK OUTSIDE
+========================================= */
+
+document.addEventListener("click", function(event) {
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    const menuToggle =
+        document.querySelector(".menu-toggle");
+
+    /* if menu open */
+    if(navMenu.classList.contains("active")) {
+
+        /* click outside menu */
+        if(
+            !navMenu.contains(event.target) &&
+            !menuToggle.contains(event.target)
+        ) {
+
+            navMenu.classList.remove("active");
+        }
+    }
+});
+
+/* =========================================
+   CLOSE MENU WHEN CLICK NAV LINK
+========================================= */
+
+document
+    .querySelectorAll("#navMenu a")
+    .forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            document
+                .getElementById("navMenu")
+                .classList.remove("active");
+        });
+});
+
 window.addEventListener("scroll", revealOnScroll);
 
 window.addEventListener("load", revealOnScroll);
