@@ -24,6 +24,11 @@ public class PageController {
         return "service";
     }
 
+    @GetMapping("/contact")
+    public String contactPage() {
+        return "contact";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {

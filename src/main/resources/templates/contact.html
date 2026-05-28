@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact Us | Mauli Vruddhashram</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/homepage.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/language.css">
+  <link rel="stylesheet" href="/css/contact.css">
+
+</head>
+
+<body>
+
+<!-- =========================================
+                NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+  <div class="nav-left">
+
+    <a href="/home">
+      <img src="/images/logo.png"
+           class="logo"
+           alt="Logo">
+    </a>
+
+    <div class="brand">
+
+      <h1>Mauli Vruddhashram</h1>
+
+      <span>
+                WHERE EVERY ELDER FEELS LIKE HOME
+            </span>
+
+    </div>
+
+  </div>
+
+  <nav id="navMenu">
+
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/service">Services</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/contact">Contact</a>
+
+    <!-- LANGUAGE -->
+    <div class="language-selector notranslate">
+
+      <div class="selected-language notranslate">
+        🌐 English ▼
+      </div>
+
+      <div class="language-dropdown notranslate">
+
+        <div onclick="changeLanguage('en')">
+          English
+        </div>
+
+        <div onclick="changeLanguage('hi')">
+          हिंदी
+        </div>
+
+        <div onclick="changeLanguage('mr')">
+          मराठी
+        </div>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <div class="nav-right">
+    <div class="menu-toggle"
+         onclick="toggleMenu()">
+      ☰
+    </div>
+  </div>
+
+</header>
+
+<!-- =========================================
+                HERO SECTION
+========================================= -->
+
+<section class="contact-hero">
+
+  <div class="contact-overlay"></div>
+
+  <div class="contact-content fade-up">
+
+        <span class="hero-badge">
+            📞 Contact Us
+        </span>
+
+    <h1>
+      We’re Here To
+      <span>Help & Support</span>
+    </h1>
+
+    <p>
+      Reach out to us for inquiries,
+      donations, elder care support,
+      or volunteering opportunities.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+                CONTACT SECTION
+========================================= -->
+
+<section class="contact-section">
+
+  <!-- LEFT -->
+  <div class="contact-info reveal">
+
+    <h2>Get In Touch</h2>
+
+    <p>
+      Feel free to contact us anytime.
+      We are always ready to help and support.
+    </p>
+
+    <div class="info-box">
+
+      <i class="fa-solid fa-location-dot"></i>
+
+      <div>
+        <h3>Address</h3>
+        <p>Nagpur, Maharashtra</p>
+      </div>
+
+    </div>
+
+    <div class="info-box">
+
+      <i class="fa-solid fa-phone"></i>
+
+      <div>
+        <h3>Phone</h3>
+        <p>
+          +91 9822738582<br>
+          +91 9730161863
+        </p>
+      </div>
+
+    </div>
+
+    <div class="info-box">
+
+      <i class="fa-solid fa-envelope"></i>
+
+      <div>
+        <h3>Email</h3>
+        <p>support@mauli.org</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT -->
+  <div class="contact-form reveal">
+
+    <form>
+
+      <div class="input-box">
+        <input type="text"
+               placeholder="Your Name"
+               required>
+      </div>
+
+      <div class="input-box">
+        <input type="email"
+               placeholder="Your Email"
+               required>
+      </div>
+
+      <div class="input-box">
+        <input type="text"
+               placeholder="Subject"
+               required>
+      </div>
+
+      <div class="input-box">
+                <textarea rows="6"
+                          placeholder="Your Message"
+                          required></textarea>
+      </div>
+
+      <button type="submit"
+              class="btn">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+                MAP SECTION
+========================================= -->
+<section class="map-section reveal">
+
+  <div class="map-container">
+
+    <iframe
+            src="https://maps.google.com/maps?q=Mauli+Vruddhashram,+Nagpur,+Maharashtra&z=16&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+  </div>
+
+</section>
+
+<!-- =========================================
+                FOOTER
+========================================= -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <div class="footer-text">
+
+      <div class="footer-brand-content">
+
+        <h2>Mauli Vruddhashram</h2>
+
+        <p class="footer-tagline">
+          Where Every Elder Feels Like Home
+        </p>
+
+      </div>
+
+      <p class="subtitle">
+        Giving dignity, care, and love to our elders.
+      </p>
+
+      <div class="socials">
+
+        <a href="#" class="social-icon">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="#" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#" class="social-icon">
+          <i class="fab fa-youtube"></i>
+        </a>
+
+        <a href="#" class="social-icon">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+
+    </div>
+
+
+
+
+    <div class="footer-links">
+
+      <h3>Quick Links</h3>
+
+      <a href="/home">Home</a>
+      <a href="/about">About</a>
+      <a href="/service">Services</a>
+      <a href="/contact">Contact</a>
+
+    </div>
+
+    <div class="footer-contact">
+
+      <h3>Contact Us</h3>
+
+      <p>📍 Nagpur, Maharashtra</p>
+
+      <p>📞 +91 9822738582</p>
+
+      <p>✉️ support@mauli.org</p>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Mauli Vruddhashram
+  </div>
+
+</footer>
+
+<!-- GOOGLE TRANSLATE -->
+<div id="google_translate_element"
+     style="display:none;">
+</div>
+
+<script src="/script.js"></script>
+<script src="/language.js"></script>
+<script src="/contact.js"></script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
