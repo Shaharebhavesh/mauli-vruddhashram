@@ -578,26 +578,30 @@
 
 @media (max-width: 768px) {
 
-    .services-hero {
+      .services-hero {
 
-        min-height: 90vh;
+            min-height: calc(100vh - 90px);
 
-        height: auto;
+            height: auto;
 
-        padding: 30px 18px 50px;
+            padding: 30px 20px 60px;
 
-        margin-top: 5px;
-    }
+            margin-top: 15px;
 
-    .services-content h1 {
+            background-position: center center !important;
 
-        font-size: 34px;
-    }
+            background-size: cover !important;
+        }
 
-    .services-content p {
+        .services-content h1 {
 
-        font-size: 15px;
-    }
+            font-size: 34px;
+        }
+
+        .services-content p {
+
+            font-size: 15px;
+        }
 
     .services-section {
 

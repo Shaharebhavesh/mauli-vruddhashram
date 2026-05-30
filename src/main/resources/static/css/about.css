@@ -1,7 +1,7 @@
 /* ===== ABOUT HERO ===== */
 .about-hero {
     height: 70vh;
-
+ margin-top: 15px;
     position: relative;
 
     display: flex;
@@ -573,7 +573,7 @@ body {
 /* navbar spacing */
 body {
 
-    padding-top: 90px;
+    padding-top: 80px;
 }
 
 /* hero section */
