@@ -1,0 +1,422 @@
+/* =========================================
+                GALLERY HERO
+========================================= */
+
+.gallery-hero {
+
+    height: 70vh;
+
+    margin-top: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55),
+        rgba(0,0,0,0.70)),
+        url("/images/nurse.png")
+        center/cover no-repeat;
+}
+
+.gallery-content {
+
+    max-width: 750px;
+
+    color: white;
+
+    padding: 20px;
+}
+
+.hero-badge {
+
+    display: inline-block;
+
+    padding: 10px 24px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(6px);
+
+    margin-bottom: 24px;
+}
+
+.gallery-content h1 {
+
+    font-size: 52px;
+
+    margin-bottom: 20px;
+}
+
+.gallery-content span {
+
+    color: #FF7043;
+}
+
+.gallery-content p {
+
+    font-size: 18px;
+
+    color: #eee;
+}
+
+/* =========================================
+                GALLERY
+========================================= */
+
+.gallery-section {
+
+    padding: 90px 8%;
+
+    background: #f8f5f2;
+}
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title span {
+
+    color: #FF7043;
+
+    font-weight: 600;
+}
+
+.section-title h2 {
+
+    font-size: 42px;
+
+    color: #2F5D50;
+
+    margin: 15px 0;
+}
+
+.gallery-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 25px;
+}
+
+.gallery-item {
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.gallery-item:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+
+    transform: scale(1.08);
+}
+
+.gallery-item {
+
+    position: relative;
+}
+
+.gallery-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+
+    transition: 0.8s;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+
+    left: 100%;
+}
+
+/* =========================================
+                CTA
+========================================= */
+
+.gallery-cta {
+
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(0,0,0,.65),
+        rgba(0,0,0,.75)),
+        url("/images/nurse.png")
+        center/cover no-repeat;
+}
+
+.cta-content {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    color: white;
+}
+
+.cta-content h2 {
+
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+}
+
+/* =========================================
+                LIGHTBOX
+========================================= */
+
+#lightbox {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.95);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 99999;
+}
+
+#lightbox img {
+
+    max-width: 90%;
+
+    max-height: 90%;
+}
+
+#lightbox span {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 30px;
+
+    color: white;
+
+    font-size: 40px;
+
+    cursor: pointer;
+}
+
+/* =========================================
+                MOBILE
+========================================= */
+
+@media (max-width:768px){
+
+    .gallery-hero{
+
+        min-height: calc(100vh - 90px);
+
+        height:auto;
+
+        padding:30px 20px 60px;
+
+        margin-top:15px;
+    }
+
+    .gallery-content h1{
+
+        font-size:34px;
+    }
+
+    .gallery-content p{
+
+        font-size:15px;
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .cta-buttons{
+
+        flex-direction:column;
+    }
+
+    .btn,
+    .btn-glass{
+
+        width:100%;
+    }
+}
+
+/* =========================================
+            HERO ANIMATION
+========================================= */
+
+.gallery-content {
+
+    animation: heroFadeUp 1.2s ease;
+}
+
+@keyframes heroFadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(50px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* FLOATING BADGE */
+
+.hero-badge {
+
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+
+    0% {
+
+        transform: translateY(0);
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+    }
+
+    100% {
+
+        transform: translateY(0);
+    }
+}
+
+/* GALLERY CARD HOVER */
+
+.gallery-item {
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.gallery-item:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE ZOOM */
+
+.gallery-item:hover img {
+
+    filter: brightness(1.05);
+
+    transform: scale(1.08);
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition: all 1s ease;
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* CTA ANIMATION */
+
+.cta-content {
+
+    animation: heroFadeUp 1.2s ease;
+}

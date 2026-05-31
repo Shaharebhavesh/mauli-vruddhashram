@@ -29,6 +29,11 @@ public class PageController {
         return "contact";
     }
 
+    @GetMapping("/gallery")
+    public String galleryPage() {
+        return "gallery";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {

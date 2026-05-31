@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <title>Gallery | Mauli Vruddhashram</title>
+
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/language.css">
+    <link rel="stylesheet" href="/css/gallery.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+
+<header class="navbar">
+
+    <div class="nav-left">
+
+        <a href="/home">
+            <img src="/images/logo.png"
+                 class="logo"
+                 alt="Logo">
+        </a>
+
+        <div class="brand">
+
+            <h1>Mauli Vruddhashram</h1>
+
+            <span>
+                WHERE EVERY ELDER FEELS LIKE HOME
+            </span>
+
+        </div>
+
+    </div>
+
+    <nav id="navMenu">
+
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/service">Services</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+
+        <!-- LANGUAGE -->
+        <div class="language-selector notranslate">
+
+            <div class="selected-language notranslate">
+                🌐 English ▼
+            </div>
+
+            <div class="language-dropdown notranslate">
+
+                <div onclick="changeLanguage('en')">
+                    English
+                </div>
+
+                <div onclick="changeLanguage('hi')">
+                    हिंदी
+                </div>
+
+                <div onclick="changeLanguage('mr')">
+                    मराठी
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="nav-right">
+        <div class="menu-toggle"
+             onclick="toggleMenu()">
+            ☰
+        </div>
+    </div>
+
+</header>
+<!-- ================= HERO ================= -->
+
+<section class="gallery-hero">
+
+    <div class="gallery-content">
+
+        <div class="hero-badge">
+
+            📸 Our Gallery
+
+        </div>
+
+        <h1>
+
+            Capturing <span>Beautiful Memories</span>
+
+        </h1>
+
+        <p>
+
+            Every smile, every moment, every memory reflects the love,
+            care and respect we provide to our elders.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery-section">
+
+    <div class="section-title reveal">
+
+        <span>PHOTO GALLERY</span>
+
+        <h2>Moments Of Happiness</h2>
+
+        <p>
+            A glimpse into the joyful life at Mauli Vruddhashram.
+        </p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item reveal">
+            <img src="/images/elder_lady.png" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/nurse.png" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/walking.png" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/gallery4.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/gallery5.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/gallery6.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/gallery7.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item reveal">
+            <img src="/images/gallery8.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="gallery-cta">
+
+    <div class="cta-content reveal">
+
+        <h2>Become A Part Of Our Family</h2>
+
+        <p>
+
+            Support our mission of providing care,
+            dignity and happiness to elderly lives.
+
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="/contact" class="btn">
+                Contact Us
+            </a>
+
+            <a href="/about" class="btn-glass">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-text">
+            <div class="footer-brand-content">
+
+                <h2>Mauli Vruddhashram</h2>
+
+                <p class="footer-tagline">
+                    Where Every Elder Feels Like Home
+                </p>
+
+            </div>
+
+            <p class="subtitle">Giving dignity, care, and love to our elders.</p>
+
+            <div class="socials">
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MIDDLE -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/service">Services</a>
+            <a href="#">Gallary</a>
+            <a href="/contact">Contact</a>
+
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>📍 Nagpur, Maharashtra</p>
+            <p>📞 +91 9822738582,9730161863,9822475887</p>
+
+
+            <p>✉️ support@mauli.org</p>
+
+            <a href="#" class="btn footer-btn">Donate Now</a>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        © 2026 Mauli Vruddhashram • All Rights Reserved
+    </div>
+
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+
+<div id="lightbox">
+
+    <span onclick="closeImage()">&times;</span>
+
+    <img id="lightbox-img">
+
+</div>
+
+<script>
+
+    function openImage(src){
+
+        document.getElementById("lightbox").style.display = "flex";
+
+        document.getElementById("lightbox-img").src = src;
+    }
+
+    function closeImage(){
+
+        document.getElementById("lightbox").style.display = "none";
+    }
+
+</script>
+
+<script src="/script.js"></script>
+<script src="/service.js"></script>
+<script src="/language.js"></script>
+
+<!-- HIDDEN GOOGLE TRANSLATE -->
+<div id="google_translate_element"
+     style="display:none;">
+</div>
+
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    window.addEventListener("scroll", () => {
+
+        reveals.forEach(reveal => {
+
+            const top = reveal.getBoundingClientRect().top;
+
+            if(top < window.innerHeight - 100){
+
+                reveal.classList.add("active");
+            }
+
+        });
+
+    });
+
+</script>
+
+</body>
+
+</html>
