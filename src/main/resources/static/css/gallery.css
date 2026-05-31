@@ -185,6 +185,43 @@
     left: 100%;
 }
 
+.gallery-navigation{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:50px;
+}
+
+.gallery-navigation button{
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#FF7043;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.gallery-navigation button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
 /* =========================================
                 CTA
 ========================================= */

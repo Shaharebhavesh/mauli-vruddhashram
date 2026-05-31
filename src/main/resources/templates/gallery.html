@@ -137,39 +137,51 @@
 
     </div>
 
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="galleryGrid" >
 
-        <div class="gallery-item reveal">
-            <img src="/images/elder_lady.png" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/elder_lady.png" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/nurse.png" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/nurse.png" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/walking.png" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/walking.png" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/gallery4.jpg" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery4.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/gallery5.jpg" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery5.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/gallery6.jpg" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery6.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/gallery7.jpg" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery7.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
 
-        <div class="gallery-item reveal">
-            <img src="/images/gallery8.jpg" alt="" onclick="openImage(this.src)">
-        </div>
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery8.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
+
+<!--        <div class="gallery-item reveal">-->
+<!--            <img src="/images/gallery8.jpg" alt="" onclick="openImage(this.src)">-->
+<!--        </div>-->
+
+    </div>
+
+    <div class="gallery-navigation">
+
+        <button id="prevBtn">❮ Previous</button>
+
+        <button id="nextBtn">Next ❯</button>
 
     </div>
 
@@ -309,6 +321,7 @@
 <script src="/script.js"></script>
 <script src="/service.js"></script>
 <script src="/language.js"></script>
+<script src="/gallery.js"></script>
 
 <!-- HIDDEN GOOGLE TRANSLATE -->
 <div id="google_translate_element"
@@ -318,26 +331,6 @@
 
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-<script>
-
-    const reveals = document.querySelectorAll(".reveal");
-
-    window.addEventListener("scroll", () => {
-
-        reveals.forEach(reveal => {
-
-            const top = reveal.getBoundingClientRect().top;
-
-            if(top < window.innerHeight - 100){
-
-                reveal.classList.add("active");
-            }
-
-        });
-
-    });
-
-</script>
 
 </body>
 
