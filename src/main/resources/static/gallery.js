@@ -1,22 +1,30 @@
 
   const images = [
 
-    '/images/walking.png',
-    '/images/nurse.png',
-    '/images/elder_lady.png',
-    '/images/group_photo.png',
+
     '/images/image1.jpeg',
     '/images/image2.jpeg',
     '/images/image3.jpeg',
     '/images/image4.jpeg',
     '/images/image5.jpeg',
-    '/images/gallery10.jpg',
-    '/images/gallery11.jpg',
-    '/images/gallery12.jpg',
-    '/images/gallery13.jpg',
-    '/images/gallery14.jpg',
-    '/images/gallery15.jpg',
-    '/images/gallery16.jpg'
+    '/images/image6.jpeg',
+    '/images/image7.jpeg',
+    '/images/image8.jpeg',
+    '/images/image9.jpeg',
+    '/images/image10.jpeg',
+    '/images/image11.jpeg',
+    '/images/image12.jpeg',
+    '/images/image13.jpeg',
+    '/images/image14.jpeg',
+    '/images/image15.jpeg',
+    '/images/image16.jpeg',
+    '/images/image17.jpeg',
+    '/images/image18.jpeg',
+    '/images/image19.jpeg',
+    '/images/image20.jpeg',
+    '/images/image21.jpeg',
+    '/images/image22.jpeg',
+    '/images/image23.jpeg'
 
     ];
 

@@ -34,6 +34,18 @@ public class PageController {
         return "gallery";
     }
 
+    @GetMapping("/donate")
+    public String donatePage() {
+
+        return "donate";
+    }
+
+    @GetMapping("/success")
+    public String successPage(){
+
+        return "success";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {

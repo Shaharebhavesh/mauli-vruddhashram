@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Mauli Vruddhashram</title>
+
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/language.css">
+    <link rel="stylesheet" href="/css/donate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+
+    <div class="nav-left">
+        <a href="/home">
+            <img src="/images/logo.png" class="logo" alt="Mauli Vruddhashram Logo">
+        </a>
+
+        <div class="brand">
+            <h1>Mauli Vruddhashram</h1>
+            <span>Where Every Elder Feels Like Home</span>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/service">Services</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/contact">Contact</a>
+
+        <!-- ===== LANGUAGE SELECTOR ===== -->
+        <div class="language-selector notranslate">
+
+            <div class="selected-language notranslate">
+                🌐 English ▼
+            </div>
+
+            <div class="language-dropdown notranslate">
+
+                <div class="notranslate"
+                     onclick="changeLanguage('en')">
+                    English
+                </div>
+
+                <div class="notranslate"
+                     onclick="changeLanguage('hi')">
+                    हिंदी
+                </div>
+
+                <div class="notranslate"
+                     onclick="changeLanguage('mr')">
+                    मराठी
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="nav-right">
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+
+</header>
+
+<section class="donate-hero">
+    <div class="donate-content">
+        <div class="hero-badge">❤️ Support Our Mission</div>
+        <h1>Make A <span>Difference Today</span></h1>
+        <p>Your generosity helps provide food, medical care, shelter and dignity to our beloved elders.</p>
+    </div>
+</section>
+
+<section class="donation-section">
+    <div class="section-title">
+        <span>DONATE NOW</span>
+        <h2>Choose Your Contribution</h2>
+    </div>
+    <div class="donation-grid">
+        <div class="amount-card" onclick="setAmount(500)">
+            <h3>₹500</h3>
+            <p>Meals Support</p>
+        </div>
+
+        <div class="amount-card" onclick="setAmount(1000)">
+            <h3>₹1000</h3>
+            <p>Medicine Support</p>
+        </div>
+
+        <div class="amount-card" onclick="setAmount(2500)">
+            <h3>₹2500</h3>
+            <p>Healthcare Support</p>
+        </div>
+
+        <div class="amount-card" onclick="setAmount(5000)">
+            <h3>₹5000</h3>
+            <p>Monthly Support</p>
+        </div>
+
+
+    </div>
+</section>
+
+<section class="donor-section">
+    <div class="section-title"><h2>Donor Information</h2></div>
+    <form class="donor-form">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Mobile Number">
+
+        <input type="number"
+               id="donationAmount"
+               placeholder="Donation Amount">
+
+        <textarea placeholder="Message"></textarea>
+
+        <button type="button" id="pay-btn" class="btn">
+            ❤️ Donate Securely
+        </button>    </form>
+</section>
+
+<section class="payment-section">
+    <div class="section-title">
+        <span>SECURE DONATION</span>
+        <h2>Choose Payment Method</h2>
+    </div>
+
+    <div class="payment-methods">
+
+        <div class="payment-card">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>UPI</h3>
+        </div>
+
+        <div class="payment-card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Credit Card</h3>
+        </div>
+
+        <div class="payment-card">
+            <i class="fa-solid fa-credit-card"></i>
+            <h3>Debit Card</h3>
+        </div>
+
+        <div class="payment-card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h3>Net Banking</h3>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="upi-section">
+    <div class="section-title"><h2>Scan & Donate</h2></div>
+    <img src="/images/upi-qr.png" class="upi-qr">
+    <p class="upi-id">UPI ID : your-upi-id@upi</p>
+</section>
+
+<section class="bank-section">
+    <div class="bank-card">
+        <h2>Bank Transfer Details</h2>
+        <p>Account Name : Add Later</p>
+        <p>Bank Name : Add Later</p>
+        <p>Account Number : Add Later</p>
+        <p>IFSC Code : Add Later</p>
+    </div>
+</section>
+
+<!-- ================= IMPACT SECTION ================= -->
+
+<section class="impact-section">
+
+    <div class="section-title">
+
+        <span>YOUR IMPACT</span>
+
+        <h2>How Your Donation Helps</h2>
+
+    </div>
+
+    <div class="impact-grid">
+
+        <div class="impact-card">
+            <h3>₹500</h3>
+            <p>Provides meals for elders.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3>₹1000</h3>
+            <p>Supports medicines and healthcare.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3>₹2500</h3>
+            <p>Helps with medical checkups.</p>
+        </div>
+
+        <div class="impact-card">
+            <h3>₹5000</h3>
+            <p>Supports monthly elder care.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="faq-section">
+
+    <div class="section-title">
+
+        <span>FAQ</span>
+
+        <h2>Frequently Asked Questions</h2>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Is my donation secure?</h3>
+
+        <p>Yes, all online donations are processed through Razorpay's secure payment gateway.</p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Can I donate using Credit or Debit Card?</h3>
+
+        <p>Yes. Razorpay supports Credit Cards, Debit Cards, UPI and Net Banking.</p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Will I receive a donation receipt?</h3>
+
+        <p>Yes, after successful payment a receipt can be sent to your email.</p>
+
+    </div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="donate-cta">
+
+    <div class="cta-content">
+
+        <h2>Every Donation Creates A Smile</h2>
+
+        <p>
+            Your support helps us provide dignity,
+            care and happiness to elderly lives.
+        </p>
+
+        <a href="/contact" class="btn">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LEFT -->
+        <div class="footer-text">
+            <div class="footer-brand-content">
+
+                <h2>Mauli Vruddhashram</h2>
+
+                <p class="footer-tagline">
+                    Where Every Elder Feels Like Home
+                </p>
+
+            </div>
+
+            <p class="subtitle">Giving dignity, care, and love to our elders.</p>
+
+            <div class="socials">
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+                <a href="#" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MIDDLE -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/service">Services</a>
+            <a href="#">Gallary</a>
+            <a href="/contact">Contact</a>
+
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>📍 Nagpur, Maharashtra</p>
+            <p>📞 +91 9822738582,9730161863,9822475887</p>
+
+
+            <p>✉️ support@mauli.org</p>
+
+            <a href="#" class="btn footer-btn">Donate Now</a>
+        </div>
+
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom">
+        © 2026 Mauli Vruddhashram • All Rights Reserved
+    </div>
+
+</footer>
+
+<script src="/script.js"></script>
+<script src="/service.js"></script>
+<script src="/language.js"></script>
+<!--<script src="/gallery.js"></script>-->
+<script src="/donate.js"></script>
+
+<!-- HIDDEN GOOGLE TRANSLATE -->
+<div id="google_translate_element"
+     style="display:none;">
+</div>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,471 @@
+/* =========================================
+                DONATE HERO
+========================================= */
+
+.donate-hero{
+
+    height:70vh;
+
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+    url('/images/group_photo.png')
+    center/cover no-repeat;
+}
+
+.donate-content{
+
+    max-width:750px;
+
+    color:#fff;
+
+    padding:20px;
+
+    animation:fadeUp 1s ease;
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(6px);
+
+    margin-bottom:24px;
+}
+
+.donate-content h1{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+}
+
+.donate-content span{
+
+    color:#FF7043;
+}
+
+.donate-content p{
+
+    font-size:18px;
+
+    color:#eee;
+
+    line-height:1.8;
+}
+
+/* =========================================
+                COMMON
+========================================= */
+
+.donation-section,
+.donor-section,
+.payment-section,
+.upi-section,
+.bank-section,
+.impact-section,
+.faq-section{
+
+    padding:90px 8%;
+}
+
+.donation-section,
+.upi-section,
+.impact-section{
+
+    background:#f8f5f2;
+}
+
+.donor-section,
+.payment-section,
+.bank-section,
+.faq-section{
+
+    background:#fff;
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.section-title span{
+
+    color:#FF7043;
+
+    font-weight:600;
+}
+
+.section-title h2{
+
+    font-size:42px;
+
+    color:#2F5D50;
+
+    margin-top:10px;
+}
+
+/* =========================================
+            DONATION CARDS
+========================================= */
+
+.donation-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+}
+
+.amount-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.amount-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+}
+
+.amount-card p{
+
+    margin-top:10px;
+
+    color:#666;
+}
+
+
+.amount-card.active{
+    background:#2F5D50;
+    color:white;
+    transform:translateY(-8px);
+}
+
+.amount-card.active p{
+    color:#fff;
+}
+
+/* =========================================
+                DONOR FORM
+========================================= */
+
+.donor-form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:grid;
+
+    gap:20px;
+}
+
+.donor-form input,
+.donor-form textarea{
+
+    padding:16px;
+
+    border-radius:14px;
+
+    border:1px solid #ddd;
+
+    font-size:15px;
+}
+
+.donor-form textarea{
+
+    height:120px;
+
+    resize:none;
+}
+
+/* =========================================
+            PAYMENT METHODS
+========================================= */
+
+.payment-methods{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.payment-card{
+
+    background:#f8f5f2;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.payment-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.payment-card i{
+
+    font-size:42px;
+
+    color:#FF7043;
+
+    margin-bottom:15px;
+}
+
+/* =========================================
+                UPI
+========================================= */
+
+.upi-qr{
+
+    width:250px;
+
+    display:block;
+
+    margin:auto;
+
+    border-radius:20px;
+
+    background:#fff;
+
+    padding:10px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.upi-id{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-size:18px;
+
+    font-weight:600;
+}
+
+/* =========================================
+                BANK DETAILS
+========================================= */
+
+.bank-card{
+
+    max-width:700px;
+
+    margin:auto;
+
+    background:#f8f5f2;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.bank-card h2{
+
+    color:#2F5D50;
+
+    margin-bottom:20px;
+}
+
+.bank-card p{
+
+    margin-bottom:12px;
+}
+
+/* =========================================
+                IMPACT
+========================================= */
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.impact-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+}
+
+.impact-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.impact-card h3{
+
+    color:#FF7043;
+}
+
+/* =========================================
+                FAQ
+========================================= */
+
+.faq-item{
+
+    max-width:800px;
+
+    margin:20px auto;
+
+    background:#f8f5f2;
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+/* =========================================
+                CTA
+========================================= */
+
+.donate-cta{
+
+    padding:100px 20px;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),
+    rgba(0,0,0,.75)),
+    url('/images/group_photo.png')
+    center/cover no-repeat;
+}
+
+.donate-cta h2{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+}
+
+
+
+/* =========================================
+                ANIMATION
+========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+/* =========================================
+                MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .donate-hero{
+
+        min-height:calc(100vh - 90px);
+
+        height:auto;
+
+        padding:30px 20px 60px;
+    }
+
+    .donate-content h1{
+
+        font-size:34px;
+    }
+
+    .section-title h2{
+
+        font-size:30px;
+    }
+
+    .payment-methods{
+
+        grid-template-columns:1fr;
+    }
+
+    .donation-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .impact-grid{
+
+        grid-template-columns:1fr;
+    }
+}
