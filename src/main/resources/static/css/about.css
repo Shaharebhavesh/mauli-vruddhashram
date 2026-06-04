@@ -13,8 +13,8 @@
     overflow: hidden;
 
     background:
-            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
-            url('/images/nurse.png') center/cover no-repeat;
+            linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+            url('/images/image26.png') center/cover no-repeat;
 }
 
 .about-content {
@@ -473,7 +473,7 @@
     .hero-bg,
     .about-hero {
 
-        background-position: center center !important;
+        background-position: left center !important;
 
         background-size: cover !important;
     }

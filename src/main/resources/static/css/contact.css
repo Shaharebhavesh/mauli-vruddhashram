@@ -22,7 +22,7 @@
 
     background:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
-        url("/images/nurse.png") center/cover no-repeat;
+        url("/images/image1.png") center 35%/cover no-repeat;
 }
 .contact-overlay {
 

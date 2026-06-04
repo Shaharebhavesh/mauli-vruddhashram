@@ -18,9 +18,9 @@
 
     background:
         linear-gradient(rgba(0,0,0,0.55),
-        rgba(0,0,0,0.70)),
-        url("/images/nurse.png")
-        center/cover no-repeat;
+        rgba(0,0,0,0.75)),
+        url("/images/image9.png")
+        center 38% /cover no-repeat;
 }
 
 .gallery-content {
