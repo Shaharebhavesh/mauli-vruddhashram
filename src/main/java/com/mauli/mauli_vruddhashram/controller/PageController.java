@@ -46,6 +46,21 @@ public class PageController {
         return "success";
     }
 
+    @GetMapping("/privacy-policy")
+    public String privacyPolicy(){
+        return "privacy-policy";
+    }
+
+    @GetMapping("/terms-and-conditions")
+    public String termsConditions(){
+        return "terms-and-conditions";
+    }
+
+    @GetMapping("/refund-policy")
+    public String refundPolicy(){
+        return "refund-policy";
+    }
+
 //    @PostMapping("/contact")
 //    @ResponseBody
 //    public String contact(Contact contact) {

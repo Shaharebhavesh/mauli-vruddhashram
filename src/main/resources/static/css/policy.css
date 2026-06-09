@@ -1,0 +1,127 @@
+/* =========================================
+                POLICY HERO
+========================================= */
+
+.policy-hero{
+
+    height:50vh;
+
+    margin-top:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),
+    rgba(0,0,0,.75)),
+    url('/images/group_photo.png')
+    center/cover no-repeat;
+}
+
+.policy-content-hero{
+
+    color:white;
+
+    max-width:700px;
+
+    padding:20px;
+}
+
+.policy-content-hero h1{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+}
+
+.policy-content-hero p{
+
+    color:#eee;
+
+    line-height:1.8;
+}
+
+/* =========================================
+                POLICY CONTENT
+========================================= */
+
+.policy-section{
+
+    padding:90px 8%;
+
+    background:#f8f5f2;
+}
+
+.policy-card{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:24px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.policy-card h2{
+
+    color:#2F5D50;
+
+    margin-bottom:20px;
+}
+
+.policy-card h3{
+
+    color:#FF7043;
+
+    margin-top:35px;
+
+    margin-bottom:10px;
+}
+
+.policy-card p,
+.policy-card li{
+
+    color:#555;
+
+    line-height:1.9;
+}
+
+.policy-card ul{
+
+    padding-left:20px;
+}
+
+/* =========================================
+                MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .policy-hero{
+
+        min-height:40vh;
+
+        padding:30px 20px;
+    }
+
+    .policy-content-hero h1{
+
+        font-size:34px;
+    }
+
+    .policy-card{
+
+        padding:30px 20px;
+    }
+}

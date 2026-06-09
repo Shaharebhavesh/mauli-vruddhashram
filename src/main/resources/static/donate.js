@@ -47,7 +47,7 @@ document.getElementById("pay-btn")
 
         const options = {
 
-            key:"rzp_test_SxVYMnExOFnzqY",
+            key:"rzp_test_SzXIuxEkzJ9trx",
 
             amount:order.amount,
 
