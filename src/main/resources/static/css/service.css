@@ -26,7 +26,7 @@
 
     background:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.7)),
-        url("/images/nurse.png") center/cover no-repeat;
+        url("/images/image28.jpeg") center/cover no-repeat;
 }
 
 .services-content {
@@ -396,7 +396,7 @@
 
     background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)),
-        url("/images/nurse.png");
+        url("/images/image2.jpeg");
 
     background-position: center;
 

@@ -105,11 +105,32 @@
             flex: 1;
         }
 
-        .image-content img {
+        .image-content img,
+        .image-container-relative img {
+
             width: 100%;
-            border-radius: 20px;
+
+            height: 380px;
+
             object-fit: cover;
+
+            object-position: center;
+
+            border-radius: 20px;
+
+            display: block;
         }
+
+        @media (max-width: 768px) {
+
+            .image-content img,
+            .image-container-relative img {
+
+                height: 260px;
+            }
+        }
+
+
 
         /* Section 2: Image Left, Text Right */
         .services-intro {
@@ -125,11 +146,7 @@
             flex: 1;
         }
 
-        .image-container-relative img {
-            width: 100%;
-            border-radius: 20px;
-            object-fit: cover;
-        }
+
 
         .btn-overlay {
             position: absolute;
