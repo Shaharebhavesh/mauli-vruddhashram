@@ -19,8 +19,8 @@
     background:
     linear-gradient(rgba(0,0,0,.55),
     rgba(0,0,0,.75)),
-    url('/images/group_photo.png')
-    center/cover no-repeat;
+    url('/images/image7.jpeg')
+    center 30% /cover no-repeat;
 }
 
 .policy-content-hero{

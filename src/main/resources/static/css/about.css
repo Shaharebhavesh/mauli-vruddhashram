@@ -104,6 +104,146 @@
     display: block;
 }
 
+/* ===== LEGAL INFO SECTION ===== */
+
+.legal-info-section {
+    padding: 70px 0;
+
+}
+
+.legal-title {
+    font-size: 42px;
+    color: #2F5D50;
+    margin-bottom: 20px;
+}
+
+.legal-description {
+    max-width: 850px;
+    color: #666;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.legal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.legal-box {
+    background: #fff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.legal-box:hover {
+    transform: translateY(-5px);
+}
+
+.legal-box span {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.legal-box strong {
+    color: #2F5D50;
+    font-size: 18px;
+}
+
+.document-buttons {
+    margin-top: 35px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .legal-title {
+        font-size: 32px;
+    }
+
+    .legal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .document-buttons {
+        flex-direction: column;
+    }
+
+    .document-buttons .btn,
+    .document-buttons .btn-glass {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Legal Section Heading */
+
+.legal-title{
+    position: relative;
+    display: inline-block;
+}
+
+/* underline animation */
+.legal-title::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-12px;
+
+    width:0;
+    height:4px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        #FF7043,
+        #2F5D50
+    );
+
+    transform:translateX(-50%);
+
+    animation: legalLine 1.2s ease forwards;
+    animation-delay: .5s;
+}
+
+@keyframes legalLine{
+    from{
+        width:0;
+    }
+    to{
+        width:120px;
+    }
+}
+
+.trust-badge{
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
 @media (max-width: 768px) {
 
     .about-image img {
@@ -276,7 +416,7 @@
 
     background:
             linear-gradient(rgba(47,93,80,0.9), rgba(47,93,80,0.92)),
-            url('/images/group_photo.png') center/cover no-repeat;
+            url('/images/image7.jpeg') center 30% /cover no-repeat;
 }
 
 .cta-content {

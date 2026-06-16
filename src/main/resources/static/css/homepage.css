@@ -1119,3 +1119,27 @@ nav a:hover {
     }
 }
 
+.footer-divider{
+    border: none;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 20px 0;
+}
+
+.footer-ngo-info h4{
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+
+
+.footer-ngo-info a{
+    color: #ffb366;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-ngo-info a:hover{
+    color: #fff;
+}
+

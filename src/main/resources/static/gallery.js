@@ -24,8 +24,13 @@
     '/images/image20.jpeg',
     '/images/image21.jpeg',
     '/images/image22.jpeg',
-    '/images/image23.jpeg'
-
+    '/images/image23.jpeg',
+    '/images/image24.jpeg',
+    '/images/image25.jpeg',
+    '/images/image29.jpeg',
+    '/images/image30.jpeg',
+    '/images/image31.jpeg',
+    '/images/image32.jpeg',
     ];
 
     let currentPage = 0;
