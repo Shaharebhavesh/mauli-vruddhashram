@@ -31,6 +31,7 @@
     '/images/image30.jpeg',
     '/images/image31.jpeg',
     '/images/image32.jpeg',
+     '/images/image34.jpeg',
     ];
 
     let currentPage = 0;
