@@ -407,6 +407,23 @@
     line-height: 1.8;
 }
 
+.mission-grid{
+    align-items: start;
+}
+
+.mission-card{
+    height: auto !important;
+    min-height: 0 !important;
+}
+.legal-info-section{
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+.mission-section{
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
 
 /* ===== CTA ===== */
 .about-cta {
@@ -853,3 +870,18 @@ body {
     background-position: center;
 }*/
 
+.mission-section,
+.legal-info-section,
+.committee-section {
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
+.mission-section .container,
+.legal-info-section .container,
+.committee-section .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
