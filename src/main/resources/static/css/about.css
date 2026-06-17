@@ -333,10 +333,10 @@
 /* ===== MISSION ===== */
 /* ===== MISSION SECTION ===== */
 .mission-section {
-
-    padding: 10px 0 60px;
-
+    padding: 10px 0 40px;
     background: #f9f6f2;
+    height: auto;
+    min-height: auto;
 }
 
 /* GRID */
@@ -743,6 +743,97 @@ body {
 
     padding-top: 80px;
 }
+
+/* ===== MANAGEMENT COMMITTEE ===== */
+
+.committee-section{
+    padding:60px 0;
+}
+
+.committee-title{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.committee-title::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-15px;
+
+    width:100px;
+    height:4px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        #FF7043,
+        #2F5D50
+    );
+}
+
+.committee-description{
+    max-width:800px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.committee-table-wrapper{
+    overflow-x:auto;
+}
+
+.committee-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.committee-table thead{
+    background:#2F5D50;
+    color:white;
+}
+
+.committee-table th,
+.committee-table td{
+    padding:18px;
+    text-align:left;
+}
+
+.committee-table tbody tr{
+    transition:.3s ease;
+}
+
+.committee-table tbody tr:hover{
+    background:#fff7f2;
+    transform:scale(1.01);
+}
+
+.committee-proof{
+    margin-top:30px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+    .committee-title{
+        font-size:32px;
+    }
+
+    .committee-table th,
+    .committee-table td{
+        padding:12px;
+        font-size:14px;
+    }
+}
+
+
 
 /* hero section */
 /*.about-hero {
